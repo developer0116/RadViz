@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wine Equality</title>
+      <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <div id="heading">
+      <h1> Wine Equality</h1>
+    </div>
+    <div class="container">   
+      <div class="right-panel">
+         <div id="attributes" class="main-panel">
+           <p style="margin-bottom:10px" class="heading2"> <b>Please choose attributes.</b> </p>           
+               <div id="values" class="selectionAlignment"></div>            
+         </div>
+          <div id="colorPanel">
+            <p style="margin-bottom:15px"> <b>Color by:</b> </p> 
+              <g><input type="radio" value="-1" label="None" name="colorAttribute" checked></input>
+                <text>None</text>
+                <p></p>
+              </g>
+              <g id="colorGroup"></g>              
+          </div>
+          <div class="opacity-panel">
+            <p><b>Opacity</b></p>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="100"  id="opacitySlider" style="width:90%;margin-top:10px;">
+            </div>
+          </div>
+         
+       </div>
+       <div class="center-panel">
+         <div id="wine-chart">
+         </div>
+       </div>    
+    </div>
+
+    <div id="tooltip" class="hidden">
+      <div class="tooltip-text" style="text-align:left">
+        <g id="tooltip-number"></g>
+        <g id="tooltip-category"></g>
+        <g id="values"></g>
+      </div>
+    </div>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
